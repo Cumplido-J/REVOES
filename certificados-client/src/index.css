@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(./fonts/Montserrat.ttf) format("woff");
+}
+
+body {
+  font-family: "Montserrat" !important;
+}
+
+hr.red {
+  margin-bottom: 20px !important;
+}
+
+main strong {
+  font-weight: bold !important;
+}
+
+.img-logo-cecyte {
+  padding-right: 1em;
+  float: left;
+}

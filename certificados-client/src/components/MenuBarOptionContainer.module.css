@@ -1,0 +1,13 @@
+.menuBarOptionContainer {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menuBarOptionContainer > * {
+    margin-left: 10px;
+}

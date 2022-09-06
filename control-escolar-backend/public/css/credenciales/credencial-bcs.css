@@ -1,0 +1,166 @@
+body{
+    /*font-family: "Copperplate", sans-serif;*/
+    font-weight: normal;
+    font-size: 10px;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    height: 201px;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+td{
+    /*border: black solid 1px;*/
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+}
+
+.div-principal{
+    width: 45%;
+    border: black solid 1px;
+    margin-right: 4%;
+    margin-bottom: 5px;
+    height: 48%;
+        float: left;
+        display: inline-block;
+    page-break-inside: avoid;
+    background-repeat: no-repeat;
+}
+
+.td-logo-sep{
+    width: 70px;
+    height:28px;
+}
+
+.td-logo-cecyte{
+    height: 30px;
+}
+
+.td-codigo-barras{
+    width: 150px;
+    height: 26px
+}
+
+.codigo-barras{
+    background-color: white;
+    width: 89%;
+    height: 45px;
+    margin-left: 4%;
+    padding-right: 4%;
+}
+
+.td-foto{
+    width: 49px;
+    height: 57px
+}
+
+.foto{
+    margin-left: 30px;
+    height: 120px;
+    width: 85px;
+    padding: 0;
+}
+
+.cargo-director{
+    text-align: center;
+    font-size: 8px;
+    width: 129px;
+    height: 13px;
+}
+
+.div-vigencia{
+    font-size: 12px;
+    text-align: center;
+    width: 101px;
+    height: 24px;
+    /*background-color: white;*/
+    border-radius: 5px;
+}
+
+.nombre-director{
+    text-transform: uppercase;
+    font-size: 8px;
+    text-align: center;
+    height: 11px
+}
+
+.matricula{
+    font-size: 12px;
+    text-align: center;
+    width: 120px;
+    height: 18px
+}
+
+.bachillerato{
+    font-size: 10px;
+    text-align: center;
+    width: 120px;
+    height: 20px
+}
+
+.firma{
+    padding: 0;
+    width: 120px;
+    height: 38px
+}
+
+.div-firma{
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    height: 50px
+}
+
+.telefonos{
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    height: 14px;
+}
+
+.nombre-alumno{
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    width: 120px;
+    height: 20px;
+}
+
+.nombre-plantel{
+    /*padding-bottom: 60px;*/
+    text-align: center;
+    vertical-align: top;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-top: 2px;
+    /*transform: rotate(-90deg);*/
+    /*white-space: nowrap;*/
+    color: rgb(242,101,37);
+}
+
+.direccion{
+    font-size: 10px;
+    text-align: center;
+    border: black solid 2px;
+    width: 134px;
+    height: 34px;
+}
+
+.curp{
+    font-size: 12px;
+    text-align: center;
+    width: 134px;
+    height: 15px;
+    text-transform: uppercase
+}
+
+.nss{
+    font-size: 12px;
+    text-align: center;
+}

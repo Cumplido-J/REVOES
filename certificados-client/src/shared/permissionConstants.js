@@ -1,0 +1,1 @@
+export const CANCEL_CERTIFICATE = "Cancelar certificado";

@@ -1,0 +1,95 @@
+@page {
+    /*  size: 21cm 29.7cm; */
+}
+
+body {
+    margin-left: 8%;
+    margin-right: 8%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+}
+
+.page-break {
+    page-break-after: always;
+}
+
+.header {
+    display: flex;
+    background-color: #ffffff;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.header-right {
+    float: right;
+    /*  margin-top: -15px; */
+}
+
+.titulo h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.logo {
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.espacio-logo{
+    margin-left: 10%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.foto{
+    /*width: 15%;*/
+    height: 150px;
+}
+
+.foto-vacia{
+    width: 15%;
+    height: 5%;
+}
+
+.row{
+    width: 100%;
+}
+
+.asunto{
+    float: right;
+}
+
+.texto{
+    text-align: justify;
+}
+
+.copia{
+    font-size: 15px;
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tabla-califi tr:nth-child(even) {
+    background-color: rgb(242, 239, 239);
+}
+
+.tabla-califi th {
+    background-color: #ffffff;
+    text-align: center;
+    color: black;
+}

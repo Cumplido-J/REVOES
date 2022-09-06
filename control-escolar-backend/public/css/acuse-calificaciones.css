@@ -1,0 +1,137 @@
+@page {
+  /*  size: 21cm 29.7cm; */
+   margin: 20;
+ }
+ 
+ body { 
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .header {
+   display: flex;
+   background-color: #ffffff;
+   margin-bottom: -40px;
+   line-height: 1.5;
+ }
+ 
+ .header img{
+   max-width: 150px;
+ }
+ 
+ .header-right {
+   float: right;
+ }
+ 
+ .logo {
+   width: 17%;
+ }
+ 
+ .logo img {
+   width: 100%;
+ }
+ 
+ .titulo h1{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 10px;
+   width: 64%;
+   margin-top: -6px;
+   margin-left: 18%;
+   font-weight: normal;
+ }
+ 
+ .fecha{
+  margin-top: 30px;
+  text-align: right;
+  font-size: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+ 
+ .inf-asignatura{
+  
+   margin-left: -20px;
+   display: block;
+ }
+ 
+ .inf-asignatura ol{
+   list-style-type: none;
+   font-size: 10px;
+ }
+ 
+ .inf-asignatura a{
+   font-weight: bold;
+ }
+ 
+ .datos_acuse {
+   display: block;
+   margin-left: -20px;
+ }
+ 
+ .datos_acuse div {
+  display: inline-block;
+ }
+ 
+ .datos_acuse ol{
+   list-style-type: none;
+   font-size: 10px;
+ }
+ 
+ .datos_acuse a{
+     font-weight: bold;
+ }
+ 
+ .datos_acuse #second-ol{
+   margin-left: 250px;
+ }
+ 
+ #tabla-califi {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   width: 100%;
+   text-align: center;
+   padding-bottom: 5px;
+ }
+ 
+ #tabla-califi, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+ 
+ 
+ #tabla-califi tr:nth-child(even){background-color: rgb(242, 239, 239);}
+ 
+ #tabla-califi th {
+   background-color: #ffffff;
+   text-align: center;
+   color: black;
+ }
+ 
+ #tabla-califi .num-lista {
+   text-align: center;
+ }
+ 
+ .firma{
+   text-align: center;
+   line-height: 1.0;
+   font-size: 10px;
+   width: 50%;
+ }
+ 
+ .firma-izq{
+   float: left;
+ }
+ 
+ .firma-der{
+   float:right;
+ }
+ 
+ .mayus{
+   font-size: 10px;
+   text-transform: uppercase;
+ }
+ 
+ .page-break {
+     page-break-after: always;
+ }

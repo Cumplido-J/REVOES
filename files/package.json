@@ -1,0 +1,17 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "database creator",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "database": "node database.js && docker-compose exec control-escolar-backend php artisan db:seed",
+    "pls-database": "node database.js && sudo docker-compose exec control-escolar-backend php artisan db:seed"
+  },
+  "author": "Miguel Parra",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5"
+  }
+}

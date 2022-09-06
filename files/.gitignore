@@ -1,0 +1,6 @@
+datos/mysql/*
+datos/sisec/logs.log
+node_modules/*
+sisec.sql
+.DS_Store
+*.log

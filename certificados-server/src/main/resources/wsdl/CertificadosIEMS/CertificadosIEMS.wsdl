@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://ws.web.mec.sep.mx/schemas"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.web.mec.sep.mx/schemas"
+                  targetNamespace="http://ws.web.mec.sep.mx/schemas">
+    <wsdl:types>
+        <xs:schema xmlns:min="http://ws.web.mec.sep.mx/schemas/beans" xmlns:ws="http://ws.web.mec.sep.mx/schemas"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+                   elementFormDefault="qualified" targetNamespace="http://ws.web.mec.sep.mx/schemas">
+            <xs:complexType name="autenticacionType">
+                <xs:sequence>
+                    <xs:element name="usuario" type="xs:string"/>
+                    <xs:element name="password" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="cargaCertificadosIEMSRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nombreArchivo">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:minLength value="2"/>
+                                    <xs:maxLength value="100"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="archivoBase64" type="xs:base64Binary"/>
+                        <xs:element name="autenticacion" type="ws:autenticacionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="consultaCertificadosIEMSRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numeroLote" type="xs:integer"/>
+                        <xs:element name="autenticacion" type="ws:autenticacionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="descargaCertificadosIEMSRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numeroLote" type="xs:integer"/>
+                        <xs:element name="autenticacion" type="ws:autenticacionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cancelarCertificadosIEMSRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="folioCertificado" type="xs:string"/>
+                        <xs:element name="autenticacion" type="ws:autenticacionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cargaCertificadosIEMSResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numeroLote" type="xs:integer"/>
+                        <xs:element name="mensaje" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="consultaCertificadosIEMSResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numeroLote" type="xs:integer"/>
+                        <xs:element name="estatusLote" type="xs:short"/>
+                        <xs:element minOccurs="0" name="mensaje" type="xs:string"/>
+                        <xs:element minOccurs="0" name="excelBase64" type="xs:base64Binary"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="descargaCertificadosIEMSResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="numeroLote" type="xs:integer"/>
+                        <xs:element name="mensaje" type="xs:string"/>
+                        <xs:element name="certificadosBase64" type="xs:base64Binary"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cancelarCertificadosIEMSResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="codigo" type="xs:int"/>
+                        <xs:element name="mensaje" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="cargaCertificadosIEMSRequest">
+        <wsdl:part element="tns:cargaCertificadosIEMSRequest" name="cargaCertificadosIEMSRequest"/>
+    </wsdl:message>
+    <wsdl:message name="cargaCertificadosIEMSResponse">
+        <wsdl:part element="tns:cargaCertificadosIEMSResponse" name="cargaCertificadosIEMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="consultaCertificadosIEMSRequest">
+        <wsdl:part element="tns:consultaCertificadosIEMSRequest" name="consultaCertificadosIEMSRequest"/>
+    </wsdl:message>
+    <wsdl:message name="consultaCertificadosIEMSResponse">
+        <wsdl:part element="tns:consultaCertificadosIEMSResponse" name="consultaCertificadosIEMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="descargaCertificadosIEMSRequest">
+        <wsdl:part element="tns:descargaCertificadosIEMSRequest" name="descargaCertificadosIEMSRequest"/>
+    </wsdl:message>
+    <wsdl:message name="descargaCertificadosIEMSResponse">
+        <wsdl:part element="tns:descargaCertificadosIEMSResponse" name="descargaCertificadosIEMSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="cancelarCertificadosIEMSRequest">
+        <wsdl:part element="tns:cancelarCertificadosIEMSRequest" name="cancelarCertificadosIEMSRequest"/>
+    </wsdl:message>
+    <wsdl:message name="cancelarCertificadosIEMSResponse">
+        <wsdl:part element="tns:cancelarCertificadosIEMSResponse" name="cancelarCertificadosIEMSResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="CertificadosIEMSPortType">
+        <wsdl:operation name="cargaCertificadosIEMS">
+            <wsdl:input message="tns:cargaCertificadosIEMSRequest" name="cargaCertificadosIEMSRequest"/>
+            <wsdl:output message="tns:cargaCertificadosIEMSResponse" name="cargaCertificadosIEMSResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="consultaCertificadosIEMS">
+            <wsdl:input message="tns:consultaCertificadosIEMSRequest" name="consultaCertificadosIEMSRequest"/>
+            <wsdl:output message="tns:consultaCertificadosIEMSResponse" name="consultaCertificadosIEMSResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="descargaCertificadosIEMS">
+            <wsdl:input message="tns:descargaCertificadosIEMSRequest" name="descargaCertificadosIEMSRequest"/>
+            <wsdl:output message="tns:descargaCertificadosIEMSResponse" name="descargaCertificadosIEMSResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarCertificadosIEMS">
+            <wsdl:input message="tns:cancelarCertificadosIEMSRequest" name="cancelarCertificadosIEMSRequest"/>
+            <wsdl:output message="tns:cancelarCertificadosIEMSResponse" name="cancelarCertificadosIEMSResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CertificadosIEMSPortTypeSoap11" type="tns:CertificadosIEMSPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="cargaCertificadosIEMS">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="cargaCertificadosIEMSRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="cargaCertificadosIEMSResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="consultaCertificadosIEMS">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="consultaCertificadosIEMSRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="consultaCertificadosIEMSResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="descargaCertificadosIEMS">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="descargaCertificadosIEMSRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="descargaCertificadosIEMSResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarCertificadosIEMS">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="cancelarCertificadosIEMSRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="cancelarCertificadosIEMSResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CertificadosIEMSPortTypeService">
+        <wsdl:port binding="tns:CertificadosIEMSPortTypeSoap11" name="CertificadosIEMSPortTypeSoap11">
+            <soap:address location="https://mecqa.siged.sep.gob.mx:443/mec-ws/services/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

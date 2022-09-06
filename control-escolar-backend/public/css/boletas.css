@@ -1,0 +1,116 @@
+@page {
+    /*  size: 21cm 29.7cm; */
+    margin: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    text-transform: uppercase;
+}
+
+li b{
+    text-transform: none;
+}
+
+.page-break {
+    page-break-after: always;
+}
+
+.header {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: -40px;
+}
+
+.header-right {
+    float: right;
+    /*  margin-top: -15px; */
+}
+
+.titulo-boleta h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    width: 66%;
+    margin-left: 17%;
+    margin-top: -7px;
+    font-weight: normal;
+}
+
+.logo {
+    width: 19%;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.fecha{
+    text-align: right;
+    font-size: 11px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.datos-boleta {
+    width: 100%;
+    display: flex;
+}
+
+.datos-boleta ol {
+    list-style: none;
+    font-size: 11px;
+    padding-left: 0;
+}
+
+.datos-div-izq {
+    width: 60%;
+}
+
+.datos-div-der {
+    width: 40%;
+    float: right;
+}
+
+.datos-der {
+    text-align: right;
+}
+
+.texto-izq{
+    text-align: left;
+}
+
+.firma{
+    text-align: center;
+    line-height: 1.0;
+    font-size: 11px;
+}
+
+#tabla-califi {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+#tabla-califi td, #tabla-califi th {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 3px;
+}
+
+#tabla-califi tr:nth-child(even) {
+    background-color: rgb(242, 239, 239);
+}
+
+#tabla-califi th {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #ffffff;
+    text-align: center;
+    color: black;
+}
